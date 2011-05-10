@@ -100,4 +100,3 @@ end
 
 send command.to_sym
 
-# xndeploy http://git.source.ninginc.com/apache-template.git/blob_plain/HEAD:/src/main/galaxy/xndeploy
