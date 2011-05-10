@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
-
 require 'optparse'
-require 'ostruct'
 require 'open-uri'
 require 'fileutils'
 require 'tempfile'
@@ -40,7 +38,6 @@ def status
 end
 
 
-
 class Whee
   attr_accessor :tar, :host, :root, :binary_repo_base
   attr_accessor :repository, :binary_url, :config_path
@@ -48,8 +45,6 @@ end
 
 
 def load_defaults
-#  flags.host = "0.0.0.0"
-#  flags.tar = "tar"
   flags = Whee.new
   open(".ugxrc") do |rc|
     while line = rc.gets
