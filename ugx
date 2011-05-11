@@ -49,7 +49,7 @@ def load_defaults
   open(".ugxrc") do |rc|
     while line = rc.gets
       key, value = line.split("=")
-      unless line =~ /#.+/
+      unless line =~ /#.+/ or line =~ /^\s*$/
         flags.send("#{key.strip}=".to_sym, value.strip)
       end
     end
